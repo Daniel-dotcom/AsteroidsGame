@@ -1,8 +1,10 @@
-//your variable declarations here
+Star[] bob = new Star[500];
 Spaceship ship;
 public void setup() 
 {
-  
+  for(int i = 0; i < 500; i++){
+     bob[i] = new Star();
+  }
   size(500, 500);
   ship  = new Spaceship();
   
@@ -11,6 +13,10 @@ public void setup()
 public void draw() 
 {
   background(0);
+  for(int i = 0; i < 500; i++){
+    bob[i].show();
+  }
+  
   ship.move();
   ship.show();        
 }
