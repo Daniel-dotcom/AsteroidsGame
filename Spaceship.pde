@@ -1,8 +1,8 @@
 class Spaceship extends Floater{   
   public Spaceship(){
-    corners = 4;
-    xCorners = new int[]{-8, -4,-8,16};
-    yCorners = new int[]{-8, 0, 8, 0};
+    corners = 10;
+    xCorners = new int[]{16, 5,-6,-3, -8, -4, -8, -3, -6, 5};
+    yCorners = new int[]{0, 5, 15, 7, 8, 0, -8,-7, -15, -5};
     myColor = color(255);
     myCenterX = 250;
     myCenterY = 250;
@@ -16,5 +16,11 @@ void hyperspace(){
   myDirectionX = 0; 
   myDirectionY = 0;
   myPointDirection = Math.random()*360;
+  }
+public double getCenterX(){
+    return myCenterX;
+  }
+public double getCenterY(){
+    return myCenterY;
   }
 }
